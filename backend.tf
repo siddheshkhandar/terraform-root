@@ -11,6 +11,6 @@ terraform {
   backend "s3" {
     bucket = "young-minds-app-tfstate-files"
     region = "us-east-1"
-    key    = "project/terraform.tfstate"
+    key    = "project-1/terraform.tfstate"
   }
 }
