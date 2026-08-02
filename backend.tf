@@ -9,8 +9,10 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "young-minds-app-tfstate-files"
-    region = "us-east-1"
-    key    = "project-jekinsfile/terraform.tfstate"
-  }
+     bucket         = "young-minds-app-tfstate-files"
+     region         = "us-east-1"
+     key            = "project/terraform.tfstate"
+     dynamodb_table = "terraform-lock-table"
+     encrypt        = true
+   }
 }
